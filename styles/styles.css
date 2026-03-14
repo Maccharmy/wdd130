@@ -1,3 +1,13 @@
+main {
+    max-width: 840px;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -22,5 +32,30 @@ img {
 }
 
 p {
+    padding: 0;
+}
+
+aside {
+    width: 250px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+p {
     padding: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+    text-align: center;
+    padding-top: 10px;
 }
