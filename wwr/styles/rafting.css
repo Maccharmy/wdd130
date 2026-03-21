@@ -1,9 +1,11 @@
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CSS Variables */
 :root {
     --primary-color: #004466;
     --accent1-color: #333;
@@ -11,11 +13,13 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* Body */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
 }
 
+/* Layout */
 header,
 main,
 footer {
@@ -23,12 +27,14 @@ footer {
     margin: 0 auto;
 }
 
+/* Headings */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
+/* Basic spacing */
 nav,
 p,
 section,
@@ -37,10 +43,12 @@ article {
     padding: 8px;
 }
 
+/* Social media links */
 .socialmedia a {
     text-decoration: none;
 }
 
+/* Hero section */
 .hero {
     position: relative;
 }
@@ -77,8 +85,12 @@ article {
     margin-left: 8px;
 }
 
+/* Social media icons - uniform size */
 .socialmedia img {
-    width: 50px;
+    width: 40px;
+    /* adjust size as needed */
     height: auto;
+    /* keeps aspect ratio */
     margin: 0 8px;
+    /* spacing between icons */
 }
