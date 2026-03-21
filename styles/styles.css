@@ -1,3 +1,10 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #004466;
     --secondary-color: #ccc;
@@ -17,7 +24,8 @@ nav {
 nav a {
     color: white;
     padding: 8px;
-    display: block;
+    display: inline-block;
+    /* horizontal links */
     text-decoration: none;
 }
 
@@ -31,30 +39,41 @@ h1 {
     color: var(--primary-color);
 }
 
+.profile {
+    float: right;
+    /* floats profile image to the right */
+    margin: 0 0 1rem 1rem;
+}
+
 main img {
-    width: 150px;
-    height: auto;
     border: 2px solid var(--secondary-color);
     padding: 5px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-aside {
+aside.box {
     width: 250px;
     margin: 20px auto;
     border: 1px solid var(--secondary-color);
-    padding: 15px;
     background-color: var(--aside-bg);
     color: var(--aside-text);
+    position: relative;
+    /* allows heading overlay */
+}
+
+aside.box h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    font-size: 1rem;
 }
 
 aside img {
     width: 200px;
     height: auto;
-}
-
-p {
-    padding: 0;
 }
 
 footer {
@@ -65,4 +84,15 @@ footer {
     color: var(--accent-color);
     font-weight: 700;
     font-style: italic;
+}
+
+/* =========================
+   Class Selectors
+   ========================= */
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    background-color: #e6f2ff;
+    color: #222;
 }
