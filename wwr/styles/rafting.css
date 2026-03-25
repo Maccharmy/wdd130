@@ -59,7 +59,7 @@ nav a:hover,
 nav a:focus {
     text-decoration: underline;
     background-color: var(--hover-color);
-    color: var(--light-color);
+    color: var(--light-color) !important;
 }
 
 .hero {
