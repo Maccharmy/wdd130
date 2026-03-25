@@ -38,6 +38,11 @@ header {
     margin: 0 auto;
 }
 
+main a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 nav {
     display: flex;
     justify-content: space-evenly;
