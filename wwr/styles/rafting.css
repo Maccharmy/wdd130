@@ -9,7 +9,6 @@
     --accent-color: #333333;
     --light-color: #ffffff;
     --overlay-color: rgba(255, 255, 255, 0.8);
-    --border-color: #cccccc;
     --hover-color: #1f4a70;
     --heading-font: Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -38,13 +37,11 @@ header {
     margin: 0 auto;
 }
 
-/* Content links only */
 main a {
     color: var(--accent-color);
     text-decoration: underline;
 }
 
-/* Nav styles */
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -144,4 +141,5 @@ nav a:focus {
     font-weight: 600;
 }
 
-footer
+footer {
+    display: flex
