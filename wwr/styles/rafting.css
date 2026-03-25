@@ -163,6 +163,10 @@ footer .socialmedia {
     gap: 1rem;
 }
 
+footer .socialmedia a {
+    color: var(--accent-color);
+}
+
 footer .socialmedia img {
     width: 40px;
     height: auto;
