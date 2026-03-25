@@ -38,11 +38,13 @@ header {
     margin: 0 auto;
 }
 
+/* Content links only */
 main a {
     color: var(--accent-color);
     text-decoration: underline;
 }
 
+/* Nav styles */
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -142,53 +144,4 @@ nav a:focus {
     font-weight: 600;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 1rem;
-    border-top: 2px solid var(--border-color);
-}
-
-footer p {
-    margin: 0;
-}
-
-footer .socialmedia {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-}
-
-footer .socialmedia img {
-    width: 40px;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .history-layout {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .adventures {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .adventures figure {
-        flex: none;
-        width: 80%;
-    }
-
-    header {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-}
+footer
