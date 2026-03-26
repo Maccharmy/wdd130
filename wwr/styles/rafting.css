@@ -29,7 +29,7 @@ body {
     background-color: var(--light-color);
 }
 
-/* global links */
+/* general link styles for body content */
 a,
 a:link,
 a:visited {
@@ -179,11 +179,11 @@ footer p {
     margin: 0;
 }
 
+/* remove underlines and keep accent color for social links */
 footer a,
 footer .socialmedia a {
     color: var(--accent-color);
     text-decoration: none;
-    /* remove underlines from social links */
 }
 
 footer .socialmedia {
@@ -228,8 +228,7 @@ footer .socialmedia img {
 }
 
 /* =====================
-   MAIN NAVIGATION
-   (Placed last to override global link colors)
+   MAIN NAVIGATION (placed last for cascade priority)
    ===================== */
 
 header nav.main-nav {
@@ -240,7 +239,7 @@ header nav.main-nav {
     padding: 1rem;
 }
 
-/* White text with full contrast */
+/* Fully accessible white nav links */
 header nav.main-nav a,
 header nav.main-nav a:link,
 header nav.main-nav a:visited {
@@ -248,15 +247,16 @@ header nav.main-nav a:visited {
     padding: 0.5rem;
     font-size: 1.1rem;
     font-weight: 700;
-    text-decoration: none;
-    color: #ffffff;
-    /* pure white for accessibility */
-    background-color: var(--primary-color);
+    color: #ffffff !important;
+    /* pure white text */
+    background-color: var(--primary-color) !important;
+    /* blue background */
+    text-decoration: none !important;
 }
 
 header nav.main-nav a:hover,
 header nav.main-nav a:focus {
-    background-color: var(--hover-color);
-    color: #ffffff;
-    text-decoration: underline;
+    background-color: var(--hover-color) !important;
+    color: #ffffff !important;
+    text-decoration: underline !important;
 }
