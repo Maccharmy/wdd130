@@ -6,7 +6,7 @@
 
 :root {
     --primary-color: #2f6fb3;
-    /* slightly lighter than #2a5d8f for better contrast */
+    /* adjusted blue for better contrast */
     --accent-color: #333333;
     --light-color: #ffffff;
     --overlay-color: rgba(255, 255, 255, 0.8);
@@ -45,10 +45,9 @@ header img {
     height: auto;
 }
 
-/* Scoped link styles */
+/* Scoped link styles for main content only */
 main a {
     color: var(--primary-color);
-    /* accessible blue link color on light background */
     text-decoration: underline;
 }
 
@@ -64,21 +63,23 @@ footer .socialmedia a {
     padding: 1rem;
 }
 
-/* FIXED contrast: ensure white text on blue background */
-.main-nav a {
+/* ✔ FIXED: enforce white text with proper specificity and !important */
+nav.main-nav a {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--light-color);
+    color: var(--light-color) !important;
+    /* ensure white text */
+    background-color: var(--primary-color);
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
+nav.main-nav a:hover,
+nav.main-nav a:focus {
     text-decoration: underline;
     background-color: var(--hover-color);
-    color: var(--light-color);
+    color: var(--light-color) !important;
 }
 
 .hero {
