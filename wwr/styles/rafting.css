@@ -1,7 +1,3 @@
-/* =====================
-   GLOBAL RESET & VARIABLES
-   ===================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -17,10 +13,6 @@
     --heading-font: Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
-
-/* =====================
-   BASE STYLES
-   ===================== */
 
 body {
     font-family: var(--body-font);
@@ -38,10 +30,6 @@ h6 {
     margin-bottom: 0.5rem;
 }
 
-/* =====================
-   HEADER
-   ===================== */
-
 header {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -56,21 +44,15 @@ header img {
     height: auto;
 }
 
-/* Scoped link styles inside main content */
+/* Scoped link styles */
 main a {
     color: var(--accent-color);
     text-decoration: underline;
 }
 
-/* social links color */
 footer .socialmedia a {
     color: var(--accent-color);
 }
-
-/* =====================
-   NAVIGATION
-   (final corrected placement is at bottom)
-   ===================== */
 
 .main-nav {
     display: flex;
@@ -80,9 +62,23 @@ footer .socialmedia a {
     padding: 1rem;
 }
 
-/* =====================
-   HERO SECTION
-   ===================== */
+.main-nav a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--light-color) !important;
+    /* force white */
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    text-decoration: underline;
+    background-color: var(--hover-color);
+    color: var(--light-color) !important;
+    /* stay white */
+}
 
 .hero {
     position: relative;
@@ -126,10 +122,6 @@ footer .socialmedia a {
     margin-left: 8px;
 }
 
-/* =====================
-   HISTORY
-   ===================== */
-
 .history-layout {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
@@ -142,10 +134,6 @@ footer .socialmedia a {
     width: 100%;
     border-radius: 6px;
 }
-
-/* =====================
-   ADVENTURES
-   ===================== */
 
 .adventures {
     display: flex;
@@ -174,10 +162,6 @@ footer .socialmedia a {
     color: var(--accent-color);
 }
 
-/* =====================
-   FOOTER
-   ===================== */
-
 footer {
     display: flex;
     justify-content: space-between;
@@ -192,13 +176,6 @@ footer p {
     margin: 0;
 }
 
-/* remove underlines & keep accent color */
-footer a,
-footer .socialmedia a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
 footer .socialmedia {
     display: flex;
     gap: 1rem;
@@ -209,10 +186,6 @@ footer .socialmedia img {
     width: 40px;
     height: auto;
 }
-
-/* =====================
-   RESPONSIVE DESIGN
-   ===================== */
 
 @media (max-width: 768px) {
     .history-layout {
@@ -238,29 +211,4 @@ footer .socialmedia img {
     .main-nav {
         flex-direction: column;
     }
-}
-
-/* =========================================================
-   FINAL FIX — Force white text in header navigation
-   ========================================================= */
-
-header nav.main-nav a,
-header nav.main-nav a:link,
-header nav.main-nav a:visited,
-header nav.main-nav a:hover,
-header nav.main-nav a:focus {
-    display: block;
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff !important;
-    /* enforce white text */
-    background-color: var(--primary-color) !important;
-    text-decoration: none;
-}
-
-header nav.main-nav a:hover,
-header nav.main-nav a:focus {
-    background-color: var(--hover-color) !important;
-    text-decoration: underline;
 }
