@@ -6,7 +6,7 @@
 
 :root {
     --primary-color: #2f6fb3;
-    /* adjusted blue for better contrast */
+    /* accessible blue */
     --accent-color: #333333;
     --light-color: #ffffff;
     --overlay-color: rgba(255, 255, 255, 0.8);
@@ -45,14 +45,10 @@ header img {
     height: auto;
 }
 
-/* Scoped link styles for main content only */
+/* Scoped link styles for main content */
 main a {
     color: var(--primary-color);
     text-decoration: underline;
-}
-
-footer .socialmedia a {
-    color: var(--accent-color);
 }
 
 /* =====================
@@ -67,27 +63,26 @@ footer .socialmedia a {
     padding: 1rem;
 }
 
-/* FIXED: enforce accessible contrast for all link states */
+/* Ensure white text with no underlines and full contrast */
 .main-nav a,
 .main-nav a:visited {
     display: block;
     padding: 0.5rem;
-    text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
+    text-decoration: none !important;
     color: var(--light-color) !important;
-    /* force white text */
     background-color: var(--primary-color) !important;
-    /* consistent background */
 }
 
-/* Maintain contrast and readability on hover/focus */
 .main-nav a:hover,
 .main-nav a:focus {
     background-color: var(--hover-color) !important;
     color: var(--light-color) !important;
+    text-decoration: underline;
 }
 
+/* HERO SECTION */
 .hero {
     position: relative;
 }
@@ -130,6 +125,7 @@ footer .socialmedia a {
     margin-left: 8px;
 }
 
+/* HISTORY LAYOUT */
 .history-layout {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
@@ -143,6 +139,7 @@ footer .socialmedia a {
     border-radius: 6px;
 }
 
+/* ADVENTURES SECTION */
 .adventures {
     display: flex;
     justify-content: space-between;
@@ -170,6 +167,7 @@ footer .socialmedia a {
     color: var(--accent-color);
 }
 
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
@@ -184,6 +182,13 @@ footer p {
     margin: 0;
 }
 
+/* FIXED: remove underlines from social media links */
+footer .socialmedia a {
+    color: var(--accent-color);
+    text-decoration: none;
+    /* removes underlines */
+}
+
 footer .socialmedia {
     display: flex;
     gap: 1rem;
@@ -195,7 +200,7 @@ footer .socialmedia img {
     height: auto;
 }
 
-/* Responsive adjustments */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .history-layout {
         grid-template-columns: 1fr;
