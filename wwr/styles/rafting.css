@@ -27,6 +27,7 @@ h5,
 h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
 header {
@@ -102,6 +103,12 @@ main a {
     max-width: 300px;
 }
 
+.hero article h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
 .hero article img {
     float: right;
     width: 125px;
@@ -141,9 +148,11 @@ main a {
     border-radius: 6px;
 }
 
-.adventures figcaption {
+.adventures figcaption h3 {
     margin-top: 0.5rem;
+    font-size: 1rem;
     font-weight: 600;
+    color: var(--accent-color);
 }
 
 footer {
