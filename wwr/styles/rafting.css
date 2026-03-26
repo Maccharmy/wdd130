@@ -37,10 +37,6 @@ a:visited {
     background-color: transparent;
 }
 
-/* =====================
-   TYPOGRAPHY
-   ===================== */
-
 h1,
 h2,
 h3,
@@ -71,10 +67,10 @@ header img {
 }
 
 /* =====================
-   MAIN NAVIGATION (BULLETPROOF WHITE LINKS)
+   MAIN NAVIGATION
    ===================== */
 
-nav.main-nav {
+header nav.main-nav {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
@@ -82,25 +78,26 @@ nav.main-nav {
     padding: 1rem;
 }
 
-/* White text no matter what stylesheet comes after */
-nav.main-nav a,
-nav.main-nav a:link,
-nav.main-nav a:visited,
-nav.main-nav a:hover,
-nav.main-nav a:focus {
+/* Bulletproof white nav links across all states */
+header nav.main-nav a,
+header nav.main-nav a:link,
+header nav.main-nav a:visited,
+header nav.main-nav a:hover,
+header nav.main-nav a:focus {
     display: block;
     padding: 0.5rem;
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff !important;
-    /* enforce white */
-    background-color: transparent !important;
+    /* guaranteed white */
+    background-color: var(--primary-color) !important;
     text-decoration: none !important;
 }
 
-nav.main-nav a:hover,
-nav.main-nav a:focus {
+header nav.main-nav a:hover,
+header nav.main-nav a:focus {
     background-color: var(--hover-color) !important;
+    color: #ffffff !important;
     text-decoration: underline !important;
 }
 
@@ -216,7 +213,7 @@ footer p {
     margin: 0;
 }
 
-/* No underline on social or footer links */
+/* Clean, no-underlined social media links */
 footer .socialmedia a,
 footer a {
     color: var(--accent-color);
@@ -259,7 +256,7 @@ footer .socialmedia img {
         text-align: center;
     }
 
-    nav.main-nav {
+    header nav.main-nav {
         flex-direction: column;
     }
 }
