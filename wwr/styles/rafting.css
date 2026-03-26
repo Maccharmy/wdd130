@@ -29,6 +29,7 @@ body {
     background-color: var(--light-color);
 }
 
+/* global links */
 a,
 a:link,
 a:visited {
@@ -64,41 +65,6 @@ header {
 header img {
     max-width: 180px;
     height: auto;
-}
-
-/* =====================
-   MAIN NAVIGATION
-   ===================== */
-
-header nav.main-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    background-color: var(--primary-color);
-    padding: 1rem;
-}
-
-/* Bulletproof white nav links across all states */
-header nav.main-nav a,
-header nav.main-nav a:link,
-header nav.main-nav a:visited,
-header nav.main-nav a:hover,
-header nav.main-nav a:focus {
-    display: block;
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff !important;
-    /* guaranteed white */
-    background-color: var(--primary-color) !important;
-    text-decoration: none !important;
-}
-
-header nav.main-nav a:hover,
-header nav.main-nav a:focus {
-    background-color: var(--hover-color) !important;
-    color: #ffffff !important;
-    text-decoration: underline !important;
 }
 
 /* =====================
@@ -213,11 +179,11 @@ footer p {
     margin: 0;
 }
 
-/* Clean, no-underlined social media links */
-footer .socialmedia a,
-footer a {
+footer a,
+footer .socialmedia a {
     color: var(--accent-color);
     text-decoration: none;
+    /* remove underlines from social links */
 }
 
 footer .socialmedia {
@@ -259,4 +225,38 @@ footer .socialmedia img {
     header nav.main-nav {
         flex-direction: column;
     }
+}
+
+/* =====================
+   MAIN NAVIGATION
+   (Placed last to override global link colors)
+   ===================== */
+
+header nav.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+/* White text with full contrast */
+header nav.main-nav a,
+header nav.main-nav a:link,
+header nav.main-nav a:visited {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    /* pure white for accessibility */
+    background-color: var(--primary-color);
+}
+
+header nav.main-nav a:hover,
+header nav.main-nav a:focus {
+    background-color: var(--hover-color);
+    color: #ffffff;
+    text-decoration: underline;
 }
