@@ -63,14 +63,16 @@ main a {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--light-color);
+    color: var(--light-color) !important;
+    /* force white */
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
     text-decoration: underline;
     background-color: var(--hover-color);
-    color: var(--light-color);
+    color: var(--light-color) !important;
+    /* stay white */
 }
 
 .hero {
