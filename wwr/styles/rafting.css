@@ -55,6 +55,10 @@ footer .socialmedia a {
     color: var(--accent-color);
 }
 
+/* =====================
+   MAIN NAVIGATION STYLES
+   ===================== */
+
 .main-nav {
     display: flex;
     justify-content: flex-end;
@@ -63,22 +67,24 @@ footer .socialmedia a {
     padding: 1rem;
 }
 
-/* ✔ FIXED: enforce white text with proper specificity and !important */
-nav.main-nav a {
+/* FIXED: enforce accessible contrast for all link states */
+.main-nav a,
+.main-nav a:visited {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--light-color) !important;
-    /* ensure white text */
-    background-color: var(--primary-color);
+    /* force white text */
+    background-color: var(--primary-color) !important;
+    /* consistent background */
 }
 
-nav.main-nav a:hover,
-nav.main-nav a:focus {
-    text-decoration: underline;
-    background-color: var(--hover-color);
+/* Maintain contrast and readability on hover/focus */
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: var(--hover-color) !important;
     color: var(--light-color) !important;
 }
 
