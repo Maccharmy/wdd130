@@ -29,11 +29,17 @@ body {
     background-color: var(--light-color);
 }
 
-a {
+a,
+a:link,
+a:visited {
     color: var(--primary-color);
     text-decoration: underline;
     background-color: transparent;
 }
+
+/* =====================
+   TYPOGRAPHY
+   ===================== */
 
 h1,
 h2,
@@ -65,7 +71,7 @@ header img {
 }
 
 /* =====================
-   MAIN NAVIGATION
+   MAIN NAVIGATION (BULLETPROOF WHITE LINKS)
    ===================== */
 
 nav.main-nav {
@@ -76,25 +82,26 @@ nav.main-nav {
     padding: 1rem;
 }
 
+/* White text no matter what stylesheet comes after */
 nav.main-nav a,
+nav.main-nav a:link,
 nav.main-nav a:visited,
-nav.main-nav a:link {
+nav.main-nav a:hover,
+nav.main-nav a:focus {
     display: block;
     padding: 0.5rem;
     font-size: 1.1rem;
     font-weight: 700;
-    text-decoration: none !important;
     color: #ffffff !important;
     /* enforce white */
-    background-color: var(--primary-color) !important;
-    /* consistent background */
+    background-color: transparent !important;
+    text-decoration: none !important;
 }
 
 nav.main-nav a:hover,
 nav.main-nav a:focus {
     background-color: var(--hover-color) !important;
-    color: #ffffff !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 /* =====================
@@ -144,7 +151,7 @@ nav.main-nav a:focus {
 }
 
 /* =====================
-   HISTORY LAYOUT
+   HISTORY SECTION
    ===================== */
 
 .history-layout {
@@ -209,7 +216,7 @@ footer p {
     margin: 0;
 }
 
-/* Remove underlines from social media links */
+/* No underline on social or footer links */
 footer .socialmedia a,
 footer a {
     color: var(--accent-color);
