@@ -5,11 +5,12 @@
 }
 
 :root {
-    --primary-color: #2a5d8f;
+    --primary-color: #2f6fb3;
+    /* slightly lighter than #2a5d8f for better contrast */
     --accent-color: #333333;
     --light-color: #ffffff;
     --overlay-color: rgba(255, 255, 255, 0.8);
-    --hover-color: #1f4a70;
+    --hover-color: #255988;
     --heading-font: Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -46,7 +47,8 @@ header img {
 
 /* Scoped link styles */
 main a {
-    color: var(--accent-color);
+    color: var(--primary-color);
+    /* accessible blue link color on light background */
     text-decoration: underline;
 }
 
@@ -62,22 +64,21 @@ footer .socialmedia a {
     padding: 1rem;
 }
 
+/* FIXED contrast: ensure white text on blue background */
 .main-nav a {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--light-color) !important;
-    /* force white */
+    color: var(--light-color);
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
     text-decoration: underline;
     background-color: var(--hover-color);
-    color: var(--light-color) !important;
-    /* stay white */
+    color: var(--light-color);
 }
 
 .hero {
@@ -187,6 +188,7 @@ footer .socialmedia img {
     height: auto;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .history-layout {
         grid-template-columns: 1fr;
