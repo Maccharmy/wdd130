@@ -1,3 +1,7 @@
+/* =====================
+   GLOBAL RESET & VARIABLES
+   ===================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +19,20 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* =====================
+   BASE STYLES
+   ===================== */
+
 body {
     font-family: var(--body-font);
     color: var(--accent-color);
+    background-color: var(--light-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 h1,
@@ -30,6 +45,10 @@ h6 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
+
+/* =====================
+   HEADER
+   ===================== */
 
 header {
     display: grid;
@@ -45,17 +64,11 @@ header img {
     height: auto;
 }
 
-/* Scoped link styles for main content */
-main a {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
 /* =====================
-   MAIN NAVIGATION STYLES
+   MAIN NAVIGATION
    ===================== */
 
-.main-nav {
+nav.main-nav {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
@@ -63,26 +76,31 @@ main a {
     padding: 1rem;
 }
 
-/* Ensure white text with no underlines and full contrast */
-.main-nav a,
-.main-nav a:visited {
+nav.main-nav a,
+nav.main-nav a:visited,
+nav.main-nav a:link {
     display: block;
     padding: 0.5rem;
     font-size: 1.1rem;
     font-weight: 700;
     text-decoration: none !important;
-    color: var(--light-color) !important;
+    color: #ffffff !important;
+    /* enforce white */
     background-color: var(--primary-color) !important;
+    /* consistent background */
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
+nav.main-nav a:hover,
+nav.main-nav a:focus {
     background-color: var(--hover-color) !important;
-    color: var(--light-color) !important;
+    color: #ffffff !important;
     text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* =====================
+   HERO SECTION
+   ===================== */
+
 .hero {
     position: relative;
 }
@@ -125,7 +143,10 @@ main a {
     margin-left: 8px;
 }
 
-/* HISTORY LAYOUT */
+/* =====================
+   HISTORY LAYOUT
+   ===================== */
+
 .history-layout {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
@@ -139,7 +160,10 @@ main a {
     border-radius: 6px;
 }
 
-/* ADVENTURES SECTION */
+/* =====================
+   ADVENTURES SECTION
+   ===================== */
+
 .adventures {
     display: flex;
     justify-content: space-between;
@@ -167,7 +191,10 @@ main a {
     color: var(--accent-color);
 }
 
-/* FOOTER */
+/* =====================
+   FOOTER
+   ===================== */
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -182,11 +209,11 @@ footer p {
     margin: 0;
 }
 
-/* FIXED: remove underlines from social media links */
-footer .socialmedia a {
+/* Remove underlines from social media links */
+footer .socialmedia a,
+footer a {
     color: var(--accent-color);
     text-decoration: none;
-    /* removes underlines */
 }
 
 footer .socialmedia {
@@ -200,7 +227,10 @@ footer .socialmedia img {
     height: auto;
 }
 
-/* RESPONSIVE */
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+
 @media (max-width: 768px) {
     .history-layout {
         grid-template-columns: 1fr;
@@ -222,7 +252,7 @@ footer .socialmedia img {
         text-align: center;
     }
 
-    .main-nav {
+    nav.main-nav {
         flex-direction: column;
     }
 }
