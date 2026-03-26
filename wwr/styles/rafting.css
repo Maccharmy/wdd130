@@ -44,9 +44,14 @@ header img {
     height: auto;
 }
 
+/* Scoped link styles */
 main a {
     color: var(--accent-color);
     text-decoration: underline;
+}
+
+footer .socialmedia a {
+    color: var(--accent-color);
 }
 
 .main-nav {
@@ -72,7 +77,7 @@ main a {
     text-decoration: underline;
     background-color: var(--hover-color);
     color: var(--light-color) !important;
-    /* stay white. I need you to pass the contrast test */
+    /* stay white */
 }
 
 .hero {
@@ -175,10 +180,6 @@ footer .socialmedia {
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
-}
-
-footer .socialmedia a {
-    color: var(--accent-color);
 }
 
 footer .socialmedia img {
