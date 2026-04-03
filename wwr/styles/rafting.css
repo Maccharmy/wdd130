@@ -58,14 +58,14 @@ header img {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--light-color) !important;
+    color: var(--light-color);
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
     text-decoration: underline;
     background-color: var(--hover-color);
-    color: var(--light-color) !important;
+    color: var(--light-color);
 }
 
 footer {
@@ -93,9 +93,18 @@ footer .socialmedia img {
     height: auto;
 }
 
-/* Contact Page Additions */
+/* Contact Page Layout */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    align-items: start;
+}
+
 .company-info {
-    margin: 2rem 0;
+    text-align: center;
 }
 
 .company-info iframe {
@@ -103,10 +112,7 @@ footer .socialmedia img {
     height: 300px;
     border: none;
     border-radius: 6px;
-}
-
-.contact-form {
-    margin: 2rem 0;
+    margin-top: 1rem;
 }
 
 .contact-form form {
@@ -162,6 +168,10 @@ footer .socialmedia img {
 
     .main-nav {
         flex-direction: column;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
     }
 
     .team {

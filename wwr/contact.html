@@ -23,43 +23,50 @@
     </header>
 
     <main>
-        <!-- Company Information -->
-        <section class="company-info">
-            <h1>White Water Rafting Company</h1>
-            <p>G 90 Ewet Housing Estate<br>Uyo, Akwa Ibom State</p>
-            <p>Phone: +234 806 825 9200</p>
-            <p>Email: info@whitewater.com</p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15898.150075855536!2d7.935712273730463!3d5.0161768950484085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1775216952349!5m2!1sen!2sng"
-              width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+        <h1>White Water Rafting Company</h1>
 
-        <!-- Contact Form -->
-        <section class="contact-form">
-            <h2>Get in Touch</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <!-- Contact Layout -->
+        <section class="contact-layout">
+            <!-- Company Information + Map -->
+            <div class="company-info">
+                <h2>Our Location</h2>
+                <p>G 90 Ewet Housing Estate<br>Uyo, Akwa Ibom State</p>
+                <p>Phone: +234 806 825 9200</p>
+                <p>Email: info@whitewater.com</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15898.150075855536!2d7.935712273730463!3d5.0161768950484085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1775216952349!5m2!1sen!2sng"
+                  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  title="White Water Rafting Company Location">
+                </iframe>
+            </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <p>Purpose of Message:</p>
-                <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-                <label><input type="radio" name="purpose" value="reservation"> Reservation
-                    Question</label>
-                <label><input type="radio" name="purpose" value="suggestion"> Website
-                    Suggestion</label>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                    <p>Purpose of Message:</p>
+                    <label for="general"><input type="radio" id="general" name="purpose"
+                          value="general"> General Inquiry</label>
+                    <label for="reservation"><input type="radio" id="reservation" name="purpose"
+                          value="reservation"> Reservation Question</label>
+                    <label for="suggestion"><input type="radio" id="suggestion" name="purpose"
+                          value="suggestion"> Website Suggestion</label>
 
-                <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly
-                    newsletter</label>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Get in Touch!</button>
-            </form>
+                    <label for="subscribe"><input type="checkbox" id="subscribe" name="subscribe">
+                        Please subscribe me to the monthly newsletter</label>
+
+                    <button type="submit">Get in Touch!</button>
+                </form>
+            </div>
         </section>
 
         <!-- Employee Profiles -->
@@ -69,8 +76,25 @@
                 <img src="images/employee1.jpg" alt="Harvey Usanga">
                 <figcaption>Harvey Usanga - Lead Guide</figcaption>
             </figure>
-            <img src="images/employee2.jpg" alt="Henrietta Mfon">
-            <figcaption>Henrietta Mfon - HR Manager</figcaption>
+            <figure>
+                <img src="images/employee2.jpg" alt="Henrietta Mfon">
+                <figcaption>Henrietta Mfon - Safety Officer</figcaption>
+            </figure>
             <figure>
                 <img src="images/employee3.jpg" alt="Aurelia Omari">
-                <figcaption>Aurelia Omari - Supervisor</figcaption>
+                <figcaption>Aurelia Omari - Trip Coordinator</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2026 White Water Rafting Co. | Usanga Mfon-Obong Effiong</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
